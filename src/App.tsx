@@ -24,7 +24,7 @@ export const CareConnectProfile = () => {
   // Color schemes for dynamic theme changes
   const colorSchemes = {
     blue: {
-      primary: 'from-green-300 via-blue-500 to-purple-600',
+      primary: 'bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r',
       secondary: 'bg-blue-600',
       accent: 'text-blue-600',
       button: 'bg-blue-600 hover:bg-blue-700 text-white',
@@ -32,7 +32,7 @@ export const CareConnectProfile = () => {
       card: 'bg-blue-50'
     },
     teal: {
-      primary: 'from-blue-400 via-teal-500 to-emerald-600',
+      primary: 'bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r',
       secondary: 'bg-teal-600',
       accent: 'text-teal-600',
       button: 'bg-teal-600 hover:bg-teal-700 text-white',
@@ -176,7 +176,7 @@ export const CareConnectProfile = () => {
               <img
                 src={ImageLogo}
                 alt="CareConnect Logo"
-                className="rounded-full shadow-lg mb-6 relative z-10 w-[120px] h-[120px] sm:w-40 sm:h-40 md:w-[50px] md:h-[50px] lg:w-48 lg:h-48 xl:w-[175px] xl:h-[175px] object-cover mx-auto"
+                className="rounded-full shadow-lg mb-6 relative z-10 w-[120px] h-[120px] sm:w-[120px] sm:h-[120px] md:w-[120px] md:h-[120px] lg:w-[120px] lg:h-[120px] xl:w-[175px] xl:h-[175px] object-cover mx-auto"
                 
               />
             </div>
@@ -291,69 +291,71 @@ export const CareConnectProfile = () => {
         </section>
 
         {/* Mission & Vision with enhanced styling */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <section>
-            <div className="flex items-center mb-6">
-              <Target className={`mr-3 ${colorSchemes[activeColorScheme].accent}`} size={28} />
-              <h2 className="text-3xl font-bold text-gray-800">Our Mission</h2>
-            </div>
-            <div
-              className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md p-8 h-full border-l-4 border-blue-500 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-            >
-              <p className="text-gray-700 text-lg leading-relaxed">
-                To empower health systems and populations with the knowledge and tools needed to optimize health services, and improve quality of life.
-              </p>
-              <div className="mt-6 rounded-lg overflow-hidden relative h-40 sm:h-48 md:h-56">
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent z-10"></div>
-                <img
-  src={ImageLogo1}
-  alt="Mission illustration"
-  className="w-full h-full object-fill transition-transform duration-700 hover:scale-110"
-/>
-                <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
-                  <span className="inline-block px-3 py-1 bg-white/90 rounded-full text-sm font-medium text-blue-700">
-                    Our Purpose
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <div className="flex items-center mb-6">
-              <Globe className={`mr-3 ${colorSchemes[activeColorScheme].accent}`} size={28} />
-              <h2 className="text-3xl font-bold text-gray-800">Our Vision</h2>
-            </div>
-            <div
-              className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md p-8 h-full border-r-4 border-blue-500 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-            >
-              <p className="text-gray-700 text-lg leading-relaxed">
-                To become a trusted leader in health consulting, transforming  health systems and shaping a healthier future for communities.
-              </p>
-              <div className="mt-6 rounded-lg overflow-hidden relative h-40 sm:h-48 md:h-56">
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent z-10"></div>
-                <img
-                  src={ImageLogo2}
-                  alt="Vision illustration"
-                  className="w-full h-full object-fill transition-transform duration-700 hover:scale-110"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
-                  <span className="inline-block px-3 py-1 bg-white/90 rounded-full text-sm font-medium text-blue-700">
-                    Our Goal
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section>
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 mb-16">
+  {/* Our Mission Section */}
+  <section className="mb-8 md:mb-0">
+    <div className="flex items-center mb-6">
+      <Target className={`mr-3 ${colorSchemes[activeColorScheme].accent}`} size={28} />
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Our Mission</h2>
+    </div>
+    <div
+      className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md p-6 md:p-8 h-full border-l-4 border-blue-500 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+    >
+      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+        To empower health systems and populations with the knowledge and tools needed to optimize health services, and improve quality of life.
+      </p>
+      <div className="mt-6 rounded-lg overflow-hidden relative h-40 sm:h-48 md:h-56">
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent z-10"></div>
+        <img
+          src={ImageLogo2}
+          alt="Vision illustration"
+          className="w-full h-full object-fill transition-transform duration-700 hover:scale-110"
+        />
+        <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
+          <span className="inline-block px-3 py-1 bg-white/90 rounded-full text-sm font-medium text-blue-700">
+            Our Purpose
+          </span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Our Vision Section */}
+  <section>
+    <div className="flex items-center mb-6">
+      <Globe className={`mr-3 ${colorSchemes[activeColorScheme].accent}`} size={28} />
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Our Vision</h2>
+    </div>
+    <div
+      className="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-md p-6 md:p-8 h-full border-r-4 border-blue-500 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+    >
+      <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+        To become a trusted leader in health consulting, transforming health systems and shaping a healthier future for communities.
+      </p>
+      <div className="mt-6 rounded-lg overflow-hidden relative h-40 sm:h-48 md:h-56">
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent z-10"></div>
+        <img
+          src={ImageLogo1}
+          alt="Vision illustration"
+          className="w-full h-full object-fill transition-transform duration-700 hover:scale-110"
+        />
+        <div className="absolute bottom-0 left-0 right-0 p-4 z-20">
+          <span className="inline-block px-3 py-1 bg-white/90 rounded-full text-sm font-medium text-blue-700">
+            Our Goal
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
         {/* About Us with enhanced AI-inspired design */}
         <section
-          className="mb-16"
+          className="mb-16 "
         >
-          <div className="flex items-center mb-6">
-            <Briefcase className={`mr-3 ${colorSchemes[activeColorScheme].accent}`} size={28} />
-            <h2 className="text-3xl font-bold text-gray-800">About Us</h2>
+          <div className="flex items-center mt-10 mb-6">
+            <Briefcase className={`mr-3 mt-10 ${colorSchemes[activeColorScheme].accent}`} size={28} />
+            <h2 className="text-3xl  font-bold mt-10 text-gray-800">About Us</h2>
           </div>
           <div
             className="bg-white rounded-xl shadow-md p-8 relative overflow-hidden border border-blue-50 transform transition-all duration-300 hover:shadow-xl"
@@ -446,40 +448,48 @@ export const CareConnectProfile = () => {
         </section>
 
         {/* Why Choose Us with modern design */}
-        <section
-          className="mb-16"
+        <section className="mb-16">
+  <div className="flex items-center mb-6">
+    <Award className={`mr-3 ${colorSchemes[activeColorScheme].accent}`} size={28} />
+    <h2 className="text-3xl font-bold text-gray-800">Why Choose Us</h2>
+  </div>
+  <div className="bg-white rounded-xl shadow-md p-8 border border-blue-50">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {[
+        "Exceptionally trained consultants – certified health professionals, laboratory specialists, data scientists, statisticians, and project managers.",
+        "Evidence-based approach – solutions backed by scientific research and best practices.",
+        "Diverse, diligent and self-reliant team.",
+        "Customized solutions – programs designed to meet individual and organizational needs.",
+        "Proven track record improving health outcomes."
+      ].map((reason, index) => (
+        <div
+          key={index}
+          className={`${colorSchemes[activeColorScheme].card} p-6 rounded-lg relative overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-lg`}
         >
-          <div className="flex items-center mb-6">
-            <Award className={`mr-3 ${colorSchemes[activeColorScheme].accent}`} size={28} />
-            <h2 className="text-3xl font-bold text-gray-800">Why Choose Us</h2>
-          </div>
-          <div className="bg-white rounded-xl shadow-md p-8 border border-blue-50">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                "Exceptionally trained consultants – certified health professionals, laboratory specialists, data scientists, statisticians, and project managers.",
-                "Evidence-based approach – solutions backed by scientific research and best practices.",
-                "Diverse, diligent and self-reliant team.",
-                "Customized solutions – programs designed to meet individual and organizational needs.",
-                "Proven track record improving health outcomes."
-              ].map((reason, index) => (
-                <div
-                  key={index}
-                  className={`${colorSchemes[activeColorScheme].card} p-6 rounded-lg relative overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-lg`}
-                >
-                  <div
-                    className={`absolute top-0 left-0 ${colorSchemes[activeColorScheme].secondary.replace('bg-', 'bg-')} h-full w-1`}
-                  />
-                  <div className="flex items-start">
-                    <span className={`inline-flex items-center justify-center h-8 w-8 rounded-full ${colorSchemes[activeColorScheme].secondary} text-white mr-3 mt-0.5 font-semibold`}>
-                      {index + 1}
-                    </span>
-                    <span className="text-gray-700">{reason}</span>
-                  </div>
-                </div>
-              ))}
+          {/* Left accent bar */}
+          <div
+            className={`absolute top-0 left-0 ${colorSchemes[activeColorScheme].secondary.replace('bg-', 'bg-')} h-full w-1`}
+          />
+          {/* Number and text container */}
+          <div className="flex items-start">
+            {/* Fixed-size number container with absolute dimensions */}
+            <div className="flex-shrink-0 mr-3 w-8 h-8">
+              <div
+                className={`flex items-center justify-center h-full w-full rounded-full ${colorSchemes[activeColorScheme].secondary}`}
+              >
+                <span className="text-white font-semibold text-sm">
+                  {index + 1}
+                </span>
+              </div>
             </div>
+            {/* Reason text */}
+            <span className="text-gray-700">{reason}</span>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* Our Team with enhanced modern card design */}
         <section
@@ -501,7 +511,7 @@ export const CareConnectProfile = () => {
 },
               {
                 name: "Ms. Skhosana",
-                title: "Senior Regional Laboratory Advisor",
+                title: "Laboratory Specialist",
                 bio: "26 years' experience in pathology laboratory space, with extensive experience in HIV prevention clinical trials.",
                 image: ImageLogo4
               },
@@ -510,7 +520,7 @@ export const CareConnectProfile = () => {
                 name: "Ms. Tepa Nkumbula",
                 title: "Health Programs Management Specialist",
                 bio: "An accomplished public health professional with extensive experience in large-scale national surveys.",
-                image: ImageLogo7 
+                image:  ImageLogo
               },
               {
                 name: "Takura Kupamupindi",
@@ -528,7 +538,7 @@ export const CareConnectProfile = () => {
                 name: "Pule Mphole",
                 title: "ICT Specialist",
                 bio: "Results-driven ICT Specialist with 16 years' experience in IT industry and consulting.",
-                image: ImageLogo
+                image: ImageLogo7
               }
             ].map((member, index) => (
               <div
